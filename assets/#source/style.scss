@@ -5,3 +5,65 @@
 @import'_global.scss';
 //-------
 
+.wrapper {
+    position: relative;
+    background-image: url('./../images/bg-leaves.webp');
+    background-position: right 13em top -33px;
+    background-repeat: no-repeat;
+}
+
+.header {
+    color: $txt-white;
+    background: $header-bg;
+    box-shadow: $header-shadow;
+    backdrop-filter: blur(3px);
+
+    &__container {
+        @include flex-container($jus: space-between);
+    }
+
+    &__logo {
+        margin-bottom: -55px;
+    }
+
+    &__jackpot {
+        box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.25);
+        margin: 24px 15px;
+    }
+
+    &__btn {
+        margin: 24px 0;
+    }
+}
+
+
+.hero {
+    width: 55%;
+    padding-top: 14px;
+
+    &__screen {
+        @include flex-container($dir: column);
+        @include block ($bor: $hero-screen-border,
+                $bor-rad: $block-radius,
+                $bck: $hero-screen-bg,
+                $bsh: $hero-screen-shadow);
+        backdrop-filter: blur(7.5px);
+        padding: 31px 0 53px;
+        margin-top: 14px;
+    }
+
+    &__buttons {
+        @include flex-container;
+        margin-top: 21px;
+    }
+
+    &__btn-3d {
+        width: 45%;
+        margin: 33px auto 0;
+        padding: 25px 0;
+    }
+}
+
+
+
+

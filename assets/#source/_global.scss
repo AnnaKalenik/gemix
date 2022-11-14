@@ -1,0 +1,141 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font: 400 18px 'Poppins', sans-serif;
+    color: $txt-dark;
+    box-sizing: border-box;
+    background-color: $site-bg;
+    background-image: url('./../images/bg-img.webp');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.container {
+    max-width: calc(1179px + 80px + 80px);
+    margin: 0 auto;
+    padding: 0 80px;
+}
+
+.jackpot {
+    position: relative;
+    text-transform: uppercase;
+    background: $jackpot-bg;
+    padding: 16.2px 31px 16.2px 69px;
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 28px;
+        height: 27px;
+        top: 15px;
+        left: 31px;
+        background-image: url('./../icons/header-star.svg');
+        background-repeat: no-repeat;
+    }
+}
+
+.btn {
+    @include button-style;
+
+    &:hover {
+        color: $txt-first-cards_green;
+        background-color: $txt-white;
+        border: 2px solid $txt-white;
+    }
+
+    &_money {
+        &:hover {
+            color: $txt-white;
+            background-color: #fa4430;
+            border: 2px solid #fa4430;
+        }
+    }
+}
+
+.btn-transp {
+    @include button-style ($bor: $btn-2d-transp-border, $bck: $btn-2d-transp-bg);
+
+    &:hover {
+        color: $txt-first-cards_green;
+        background-color: $txt-white;
+        border: 2px solid $txt-first-cards_green;
+    }
+}
+
+.btn,
+.btn-transp {
+    &__screen {
+        width: 11.5em;
+        padding: 14.5px 0;
+        margin: 0 10px;
+    }
+}
+
+.btn-3d {
+    @include button-style ($bor: $btn-3d-border, $bck: $btn-3d-bg, $bsh: $btn-3d-shadow);
+    padding: 13.5px 38.5px;
+
+    &_big {
+        padding: auto;
+    }
+}
+
+.btn,
+.btn-transp,
+.btn-3d {
+    @include flex-container;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+
+.main-title {
+    @include title ($col: $txt-main-title);
+    text-shadow: 0px 0px 20px #001E03;
+}
+
+// .border {
+//     border: 1px solid $bor-yel;
+// }
+
+// .paragraph {
+//     font-size: 18px;
+//     line-height: 25px;
+//     margin-bottom: 20px;
+// }
+
+// .title-2 {
+//     @include title($fs: 40px, $lh: 60px);
+
+// }
+
+// .title-3 {
+//     @include title($fs: 35px, $lh: 52px, $pd: 10px 0 20px);
+// }
+
+// .title-4 {
+//     @include title($fs: 30px, $lh: 45px, $pd: 10px 0 20px);
+// }
+
+// .btn-to-header {
+//     display: block;
+//     position: absolute;
+//     bottom: 90px;
+//     right: 13%;
+//     width: 137px;
+//     height: 137px;
+//     background-image: url('./../icons/btn-to-header.svg');
+//     background-size: contain;
+//     transition: all 0.3s ease;
+
+//     &:hover {
+//         transform: scale(1.1);
+//     }
+// }
