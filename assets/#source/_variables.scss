@@ -10,6 +10,10 @@ $hero-screen-bg:  rgba(38, 84, 3, 0.31);
 $hero-screen-border:  4px solid #46D101;
 $hero-screen-shadow: 0px 15px 20px rgba(0, 0, 0, 0.25);
 
+$spin-item-bg: #47DE00;
+
+$rating-card-bg: linear-gradient(270deg, rgba(250, 255, 0, 0.5) 6.55%, rgba(219, 255, 0, 0) 91.27%);
+
 $txt-white: #FFFFFF;
 $txt-dark: #0F3000;
 $txt-main-title: #A2FF76;
@@ -23,6 +27,7 @@ $btn-2d-transp-bg: rgba(255, 255, 255, 0.2);
 $btn-2d-transp-border: 2px solid #E5E33A;
 
 $btn-3d-bg: linear-gradient(180deg, #FFF84B 0%, #8F9B00 100%);
+$btn-3d-bg-hover: linear-gradient(180deg, #ffd05a 0%, #d08000 100%);
 $btn-3d-border: 0.5px solid #FFFFFF;
 $btn-3d-shadow: 1px 7px 20px rgba(0, 0, 0, 0.25);
 
@@ -79,13 +84,15 @@ $block-radius: 20px;
     letter-spacing: -0.02em;
 }
 
-@mixin block ($bck: #fff,
-            $bor: 1px solid black,
-            $bor-rad: 50px,
-            $bsh: $hero-screen-shadow) {
+@mixin block ($bck: rgba(253, 255, 228, 0.25),
+            $bor: 1px solid #FFFFFF,
+            $bor-rad: $block-radius,
+            $bsh: 0px 7px 15px #387000,
+            $pad: 37px 61px) {
 
     background: $bck;
     border: $bor;
     border-radius: $bor-rad;
     box-shadow: $bsh;
+    padding: $pad;
 }

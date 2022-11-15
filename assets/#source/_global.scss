@@ -32,12 +32,13 @@ body {
     &::before {
         position: absolute;
         content: '';
-        width: 28px;
-        height: 27px;
-        top: 15px;
+        width: 26px;
+        height: 26px;
+        top: 17px;
         left: 31px;
-        background-image: url('./../icons/header-star.svg');
+        background-image: url('./../icons/star-3d.svg');
         background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 
@@ -79,11 +80,23 @@ body {
 }
 
 .btn-3d {
-    @include button-style ($bor: $btn-3d-border, $bck: $btn-3d-bg, $bsh: $btn-3d-shadow);
-    padding: 13.5px 38.5px;
+    @include button-style ($fs: 16px, $lh: 24px, $bor: $btn-3d-border, $bck: $btn-3d-bg, $bsh: $btn-3d-shadow);
+    padding: 11.5px 36.5px;
 
     &_big {
-        padding: auto;
+        width: 45%;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    &_spin {
+        padding: 17px 47px;
+        font-size: 22px;
+        line-height: 33px;
+    }
+
+    &:hover {
+        background: $btn-3d-bg-hover;
     }
 }
 
@@ -95,26 +108,150 @@ body {
     transition: all 0.3s ease-in;
 }
 
-
 .main-title {
     @include title ($col: $txt-main-title);
     text-shadow: 0px 0px 20px #001E03;
 }
 
-// .border {
-//     border: 1px solid $bor-yel;
-// }
+.rating {
+    @include flex-container;
+    background-color: $site-bg;
+    padding: 25px 0;
+    margin-top: 25px;
 
-// .paragraph {
-//     font-size: 18px;
-//     line-height: 25px;
-//     margin-bottom: 20px;
-// }
+    &__text {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: $txt-dark;
+    }
 
-// .title-2 {
-//     @include title($fs: 40px, $lh: 60px);
+    &__stars {
+        width: 104.71px;
+        height: 18px;
+        background-image: url('../icons/stars-yellow.svg');
+        background-repeat: no-repeat;
+        margin: 7px 22px;
+    }
+}
 
-// }
+.paragraph {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+
+.title {
+    @include title($fs: 40px, $lh: 60px);
+}
+
+.title-3 {
+    @include title($fs: 35px, $lh: 52px);
+    margin-bottom: 25px;
+}
+
+.title-4 {
+    @include title($fs: 30px, $lh: 45px);
+    margin-bottom: 25px;
+}
+
+.text-section {
+    @include flex-container($dir: column, $ali: stretch);
+    margin-top: 70px;
+
+    &__img {
+        margin-bottom: 70px;
+        filter: drop-shadow(0px 7px 10px rgba(0, 0, 0, 0.25));
+    }
+
+    &__block {
+        @include flex-container($dir: column);
+        @include block ($pad: 30px 61px 21px);
+    }
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        margin: 0 0 23px 85px;
+    }
+
+    &__item {
+        font-size: 18px;
+        line-height: 24px;
+        list-style-type: disc;
+        padding-left: 13px;
+    }
+
+    &__btn-3d {
+        margin: 40px auto 0;
+        box-shadow: 0px 2px 50px #31ff45;
+    }
+}
+
+.slider-container {
+    position: relative;
+    margin: 0 auto;
+    padding: 28px 5px;
+
+    @media (max-width: 767px) {
+        width: 90%;
+    }
+
+    @media (max-width: 767px) {
+        padding: 18px 5px;
+    }
+}
+  
+.slider {
+    overflow: hidden;
+    margin: 0 auto;
+
+    &__line {
+        display: flex;
+        flex-wrap: nowrap;
+        transition: all 0.3s ease;
+    }
+
+    &__slide {
+        width: 100%;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+        border: 2px solid #ffffff;
+        border-radius: $block-radius;
+        transition: all 0.3s ease;
+    } 
+}
+      
+.btn-prev,
+.btn-next {
+    position: absolute;
+    width: 22px;
+    height: 28px;
+    background: none;
+    background-repeat: no-repeat;
+    top: calc(50% - 14px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-prev {
+    background-image: url('./../icons/star-3d.svg');
+    left: -28px;
+}
+
+.btn-next {
+    background-image: url('./../icons/star-3d.svg');
+    right: -22px;
+}
+  
+.btn-prev:hover,
+.btn-next:hover {
+    transform: scale(1.4);
+}
 
 // .title-3 {
 //     @include title($fs: 35px, $lh: 52px, $pd: 10px 0 20px);
