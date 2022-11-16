@@ -7,9 +7,14 @@
 
 .wrapper {
     position: relative;
-    background-image: url('./../images/bg-leaves.webp');
-    background-position: right 13em top -33px;
+    background-image: url('./../images/bg-img-leavs.webp'), url('./../images/shadow.webp');
+    background-position: left 0 top -170px, left 0 top 300px;
     background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (max-width: 1220px) {
+        background-position: left 0 top -53px, left 0 top 300px;
+    }
 }
 
 .header {
@@ -20,28 +25,56 @@
 
     &__container {
         @include flex-container($jus: space-between);
+
+        @media (max-width: 939px) {
+            justify-content: space-around;        
+        }
     }
 
     &__logo {
         margin-bottom: -55px;
-    }
 
+        @media (max-width: 939px) {
+            margin-bottom: 0px;
+            width: 175px;
+            height: auto;
+        }
+    }
+    
+    &__img {
+        @media (max-width: 939px) {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+    }
+    
     &__jackpot {
         box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.25);
-        margin: 24px 15px;
+        margin: 14px 15px;
     }
 
     &__btn {
-        margin: 24px 0;
+        margin: 14px 0;
     }
 }
 
-
 .hero {
-    width: 55%;
     padding-top: 14px;
 
+    @media (max-width: 1124px) {
+        padding-top: 30px;
+    }
+
+    &__img {
+        @media (max-width: 1100px) {
+            width: 330px;
+            height: auto;
+        }
+    }
+
     &__screen {
+        width: 943px;
         @include flex-container($dir: column);
         @include block ($bor: $hero-screen-border,
                 $bor-rad: $block-radius,
@@ -49,7 +82,19 @@
                 $bsh: $hero-screen-shadow);
         backdrop-filter: blur(7.5px);
         padding: 31px 0 53px;
-        margin-top: 14px;
+        margin: 14px auto 0;
+
+        @media (max-width: 1100px) {
+            width: 743px;
+        }
+
+        @media (max-width: 900px) {
+            width: 650px;
+        }
+
+        @media (max-width: 786px) {
+            max-width: 100%;
+        }
     }
 
     &__buttons {
@@ -65,10 +110,14 @@
 
 .spins {
     margin-top: 42px;
-    background-color: $site-bg;
 
     &__list {
         @include flex-container($jus: space-between);
+
+        @media (max-width: 1263px) {
+            justify-content: space-around;
+            gap: 40px 20px;
+        }
     }
 
     &__item {
@@ -85,9 +134,15 @@
 
         &_big {
             background: #1FE000;
+            border: 3px solid rgba(44, 107, 5, 0.61);
             box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.25);
             backdrop-filter: blur(15px);
             padding: 13px 70px 40px;
+            margin: 0 10px;
+
+            @media (max-width: 1263px) {
+                // margin: 0 10px;
+            }
         }
 
         &_bg1,
@@ -112,13 +167,12 @@
     }
 
     &__rectangle {
-        width: 194px;
-        height: 65px;
-        margin-right: 10px;
+        width: 165.81px;
+        height: 66.44px;
         
         &_big {
-            width: 267px;
-            height: 88px;
+            width: 213.21px;
+            height: 85.98px;
         }
     }
 
@@ -133,7 +187,7 @@
         font-size: 12px;
         line-height: 18px;
         color: $txt-dark;
-        background: $rating-card-bg;
+        background: $rating-bg;
         border-radius: 20px;
         margin-top: 21px;
         padding: 2px 46px;
@@ -203,7 +257,6 @@
 .review {
     position: relative;
     @include flex-container($jus: flex-start);
-    background-color: $site-bg;
     margin-top: 25px;
 
     &__title {
@@ -215,12 +268,27 @@
     &__block {
         @include block ($pad: 37px 128px 17px 61px);
         width: 67%;
+
+        @media (max-width: 1206px) {
+            width: 74%;
+        }
     }
 
     &__img {
         position: absolute;
         top: -20px;
         right: 70px;
+
+        @media (max-width: 1206px) {
+            width: 360px;
+            top: 100px;
+            right: 70px;
+        }
+
+        @media (max-width: 1024px) {
+            width: 260px;
+            top: 0px;
+        }
     }
 }
 
@@ -232,16 +300,35 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
         gap: 40px 72px;
+
+        @media (max-width: 1220px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;    
+            gap: 30px 52px;
+        }
+
+        @media (max-width: 745px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;    
+            gap: 30px;
+        }
     }
 }
 
 .details {
-    margin-top: 74px;
+    width: 100%;
+    margin-top: $margin-top;
     @include flex-container($dir: column);
 
     &__title {
         margin-bottom: 30px;
     }
+
+    &__list {
+        @include flex-container($jus: space-between, $ali: flex-start);
+    }
+
+
 
     &__btn-3d {
         margin: 95px auto 0;
@@ -251,10 +338,21 @@
 
 .table-wrapper {
     @include block ($pad: 27px 107px 127px);
+    width: 100%;
 }
 
-.table td:first-child {
-    font-weight: 700;
+.table {
+    vertical-align: top;
+
+    &__first {
+        font-weight: 700;
+    }
+
+    &__first,
+    &__second {
+        width: 50%;
+        padding-bottom: 10px;
+    }
 }
 
 .video-block {
@@ -262,9 +360,14 @@
     width: 746px;
     height: 274px;
     background: black;
+    border: 2px solid $txt-white;
     border-radius: $block-radius;
     overflow: hidden;
     margin: -65px auto;
+
+    @media (max-width: 920px) {
+        width: 80%;
+    }
 
     &__btn {
         position: absolute;
@@ -284,8 +387,173 @@
 }
 
 .screenshots {
-    margin-top: 70px;
+    margin-top: $margin-top;
 }
+
+.demo {
+    margin-top: $margin-top;
+
+    &__block {
+        @include block ($pad: 30px 62px 50px);
+    }
+
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__list {
+        @include flex-container($dir: column);
+    }
+
+    &__item {
+        @include flex-container($wrap: nowrap);
+        gap: 7%;
+        width: 100%;
+        @include block ($bck: $demo-item-bg,
+                        $bor: none,
+                        $bor-rad: $block-radius,
+                        $bsh: $demo-item-shadow,
+                        $pad: 23px 45px);
+        margin-top: 20px;
+    }
+
+    &__col-1 {
+        @include flex-container($dir: column, $ali: flex-start, $jus: space-between);
+    }
+
+    &__rectangle {
+        width: 184px;
+        height: 73px;
+        background: radial-gradient(rgba(33, 137, 7, 0.358), transparent 70%);
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__rating {
+        position: relative;
+        font-size: 12px;
+        line-height: 18px;
+        color: #196000;
+        margin-top: 22px;
+        padding: 2px 26px 2px 46px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 30px;
+            height: 30px;
+            top: 3px;
+            left: 0px;
+            background-image: url('./../icons/star-3d-shadow.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 130px;
+            height: 2px;
+            bottom: 0px;
+            left: 46px;
+            background: linear-gradient(270deg, rgba(250, 130, 198, 0) 4.52%, rgba(222, 89, 163, 0.5) 50.47%, rgba(187, 36, 118, 0.5) 95.48%);
+        }
+    }
+
+    &__strong {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &__col-2 {
+        @include flex-container($dir: column, $jus: space-between);
+    }
+
+    &__subtitle {
+        position: relative;
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 42px;
+        color: #FFFFFF;
+        padding: 10px 0 12px;
+        margin-bottom: 17px;
+        
+        &::after {
+            position: absolute;
+            content: '';
+            width: 440px;
+            height: 1px;
+            bottom: 0px;
+            left: 0px;
+            background: linear-gradient(90deg, rgba(246, 124, 192, 0) -0.08%, #AF1267 48.91%, rgba(246, 124, 192, 0) 100%);
+        }
+    }
+
+    &__icons {
+        @include flex-container;
+        gap: 10px 12px;
+    }
+
+    &__col-3 {
+        @include flex-container($dir: column, $jus: space-between);
+    }
+
+    &__btn-3d,
+    &__btn-demo {
+        padding: 12px 38.5px;
+        flex-wrap: nowrap;
+        width: 170px;
+    }
+
+    &__btn-3d {
+        box-shadow: none;
+    }
+
+    &__btn-demo {
+        margin-top: 28px;
+    }
+}
+
+.footer {
+    margin-top: 140px;
+
+    &__main {
+        background: $footer-bg;
+        box-shadow: $footer-shadow;
+    }
+
+    &__container {
+        position: relative;
+        padding: 46px 140px 34px;
+    }
+
+    &__logo {
+        position: absolute;
+        top: -70px;
+        left: calc(50% - 76px);
+    }
+
+    &__text,
+    &__copy {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $txt-footer;
+    }
+
+    &__copy {
+        padding: 28px 80px;
+        text-align: center;
+    }
+}
+
+
+
+
 
 
 

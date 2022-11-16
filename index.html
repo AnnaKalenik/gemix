@@ -17,7 +17,7 @@
         <header class="header">
             <div class="container header__container">
                 <a href="#gemix" class="logo header__logo">
-                    <img src="./assets/images/logo.webp" alt="Gemix logo" class="logo__img">
+                    <img class="logo__img header__img" src="./assets/images/logo.webp" alt="Gemix logo">
                 </a>
                 <p class="jackpot header__jackpot">Jackpot: $5,000,000</p>
                 <span class="btn header__btn">Play now</span>
@@ -144,62 +144,60 @@
                 <div class="table-wrapper" itemscope itemtype="https://schema.org/Table">
                     <meta itemprop="about" content="Game Details">
                     <h2 class="title details__title">Game Details</h2>
-                    <table class="table">
-                        <tr>
-                            <td>
-                                <table>
-                                    <tr>
-                                        <td><p>Provider</p></td>
-                                        <td><p>Lorem ipsum</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p>Release Date</p></td>
-                                        <td><p>12.03.2022</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p>RTP</p></td>
-                                        <td><p>96.30%</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p>Layout</p></td>
-                                        <td><p>6x4</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p>Volatility</p></td>
-                                        <td><p>HIGH</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p>Win Potential</p></td>
-                                        <td><p>x1000</p></td>
-                                    </tr>
-                                </table>
-                            </td>
-                            <td>
-                                <table>
-                                    <tr>
-                                        <td><p>Paylines</p></td>
-                                        <td><p>10</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p>Bet Range</p></td>
-                                        <td><p>$1 - $100</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p>Devices</p></td>
-                                        <td><p>PC, Mac, iOS, Android</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p>Rating</p></td>
-                                        <td><p>5/5</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p>Special features</p></td>
-                                        <td><p>Bonus Buy, Wild Symbols, Free Spins</p></td>
-                                    </tr>
-                                </table>
-                            </td>                            
-                        </tr>
-                    </table>
+                    <ul class="details__list">
+                        <li class="details__item">
+                            <table class="table details__table">
+                                <tr>
+                                    <td class="table__first"><p>Provider</p></td>
+                                    <td class="table__second"><p>Lorem ipsum</p></td>
+                                </tr>
+                                <tr>
+                                    <td class="table__first"><p>Release Date</p></td>
+                                    <td class="table__second"><p>12.03.2022</p></td>
+                                </tr>
+                                <tr>
+                                    <td class="table__first"><p>RTP</p></td>
+                                    <td class="table__second"><p>96.30%</p></td>
+                                </tr>
+                                <tr>
+                                    <td class="table__first"><p>Layout</p></td>
+                                    <td class="table__second"><p>6x4</p></td>
+                                </tr>
+                                <tr>
+                                    <td class="table__first"><p>Volatility</p></td>
+                                    <td class="table__second"><p>HIGH</p></td>
+                                </tr>
+                                <tr>
+                                    <td class="table__first"><p>Win Potential</p></td>
+                                    <td class="table__second"><p>x1000</p></td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li class="details__item">
+                            <table class="table details__table">
+                                <tr>
+                                    <td class="table__first"><p>Paylines</p></td>
+                                    <td class="table__second"><p>10</p></td>
+                                </tr>
+                                <tr>
+                                    <td class="table__first"><p>Bet Range</p></td>
+                                    <td class="table__second"><p>$1 - $100</p></td>
+                                </tr>
+                                <tr>
+                                    <td class="table__first"><p>Devices</p></td>
+                                    <td class="table__second"><p>PC, Mac, iOS, Android</p></td>
+                                </tr>
+                                <tr>
+                                    <td class="table__first"><p>Rating</p></td>
+                                    <td class="table__second"><p>5/5</p></td>
+                                </tr>
+                                <tr>
+                                    <td class="table__first"><p>Special features</p></td>
+                                    <td class="table__second"><p>Bonus Buy, Wild Symbols, Free Spins</p></td>
+                                </tr>
+                            </table>
+                        </li>
+                    </ul>
                 </div>
                 <div class="video-block details__video-block">
                     <video class="video-block__video" src="./assets/video/video.mp4" width="746" height="274" poster="./assets/images/video-poster.webp"></video>
@@ -287,14 +285,150 @@
                 <span class="btn-3d text-section__btn-3d">Play now</span>    
             </section>
 
+            <section class="demo container">
+                <div class="demo__block">
+                    <h2 class="title demo__title">Best Casinos to Play</h2>
+                    <ul class="demo__list">
+                        <li class="demo__item">
+                            <div class="demo__col-1">
+                                <div class="demo__rectangle">
+                                    <img class="demo__img" src="./assets/icons/national-casino-demo.svg" alt="Icon national casino"></img>
+                                </div>
+                                <div class="demo__rating"><b class="demo__strong">Rating 9</b>/10</div>
+                            </div>
+                            <div class="demo__col-2">
+                                <div class="demo__subtitle">100% up to $9,000 on First Deposit</div>
+                                <div class="demo__icons">
+                                    <img src="./assets/icons/visa.svg" alt="Visa">
+                                    <img src="./assets/icons/mastercard.svg" alt="Mastercard">
+                                    <img src="./assets/icons/bit.svg" alt="BitCoin">
+                                    <img src="./assets/icons/lts.svg" alt="Lts">
+                                    <img src="./assets/icons/jeton.svg" alt="Jeton">
+                                    <img src="./assets/icons/ethereum.svg" alt="Ethereum">
+                                    <img src="./assets/icons/neteller.svg" alt="Neteller">
+                                    <img src="./assets/icons/discover.svg" alt="Discover">
+                                    <img src="./assets/icons/diners-club.svg" alt="Diners-club">
+                                    <img src="./assets/icons/eco-payz.svg" alt="Eco payz">
+                                    <img src="./assets/icons/skrill.svg" alt="Skrill">
+                                </div>
+                            </div>
+                            <div class="demo__col-3">
+                                <span class="btn-3d demo__btn-3d">Play now</span>
+                                <span class="btn-demo demo__btn-demo">Play demo</span>
+                            </div>
+                        </li>
+                        <li class="demo__item">
+                            <div class="demo__col-1">
+                                <div class="demo__rectangle">
+                                    <img class="demo__img" src="./assets/icons/national-casino-demo.svg" alt="Icon national casino"></img>
+                                </div>
+                                <div class="demo__rating"><b class="demo__strong">Rating 9</b>/10</div>
+                            </div>
+                            <div class="demo__col-2">
+                                <div class="demo__subtitle">100% up to $9,000 on First Deposit</div>
+                                <div class="demo__icons">
+                                    <img src="./assets/icons/visa.svg" alt="Visa">
+                                    <img src="./assets/icons/mastercard.svg" alt="Mastercard">
+                                    <img src="./assets/icons/bit.svg" alt="BitCoin">
+                                    <img src="./assets/icons/lts.svg" alt="Lts">
+                                    <img src="./assets/icons/jeton.svg" alt="Jeton">
+                                    <img src="./assets/icons/ethereum.svg" alt="Ethereum">
+                                    <img src="./assets/icons/neteller.svg" alt="Neteller">
+                                    <img src="./assets/icons/discover.svg" alt="Discover">
+                                    <img src="./assets/icons/diners-club.svg" alt="Diners-club">
+                                    <img src="./assets/icons/eco-payz.svg" alt="Eco payz">
+                                    <img src="./assets/icons/skrill.svg" alt="Skrill">
+                                </div>
+                            </div>
+                            <div class="demo__col-3">
+                                <span class="btn-3d demo__btn-3d">Play now</span>
+                                <span class="btn-demo demo__btn-demo">Play demo</span>
+                            </div>
+                        </li>
+                        <li class="demo__item">
+                            <div class="demo__col-1">
+                                <div class="demo__rectangle">
+                                    <img class="demo__img" src="./assets/icons/national-casino-demo.svg" alt="Icon national casino"></img>
+                                </div>
+                                <div class="demo__rating"><b class="demo__strong">Rating 9</b>/10</div>
+                            </div>
+                            <div class="demo__col-2">
+                                <div class="demo__subtitle">100% up to $9,000 on First Deposit</div>
+                                <div class="demo__icons">
+                                    <img src="./assets/icons/visa.svg" alt="Visa">
+                                    <img src="./assets/icons/mastercard.svg" alt="Mastercard">
+                                    <img src="./assets/icons/bit.svg" alt="BitCoin">
+                                    <img src="./assets/icons/lts.svg" alt="Lts">
+                                    <img src="./assets/icons/jeton.svg" alt="Jeton">
+                                    <img src="./assets/icons/ethereum.svg" alt="Ethereum">
+                                    <img src="./assets/icons/neteller.svg" alt="Neteller">
+                                    <img src="./assets/icons/discover.svg" alt="Discover">
+                                    <img src="./assets/icons/diners-club.svg" alt="Diners-club">
+                                    <img src="./assets/icons/eco-payz.svg" alt="Eco payz">
+                                    <img src="./assets/icons/skrill.svg" alt="Skrill">
+                                </div>
+                            </div>
+                            <div class="demo__col-3">
+                                <span class="btn-3d demo__btn-3d">Play now</span>
+                                <span class="btn-demo demo__btn-demo">Play demo</span>
+                            </div>
+                        </li>
+                    </ul>    
+                </div>
+            </section>
 
-
-
-
-
+            <section class="faq container">
+                <h2 class="title faq__title">Faq</h2>
+                <ul class="faq__list">
+                    <li class="faq__item">
+                        <div class="faq__accordion">
+                            <div class="faq__btn"></div>
+                            <div class="faq__question">Where can I play the spin game?</div>
+                        </div>
+                        <div class="faq__panel">
+                          <p class=" paragraph faq__paragraph">You can enjoy the live casino game in any online casino. Ensure it's regulated and licensed for max safety playing online.</p>
+                        </div>
+                    </li>
+                    <li class="faq__item">
+                        <div class="faq__accordion">
+                            <div class="faq__btn"></div>
+                            <div class="faq__question">Where can I play the spin game?</div>
+                        </div>
+                        <div class="faq__panel">
+                          <p class=" paragraph faq__paragraph">You can enjoy the live casino game in any online casino. Ensure it's regulated and licensed for max safety playing online.</p>
+                        </div>
+                    </li>
+                    <li class="faq__item">
+                        <div class="faq__accordion">
+                            <div class="faq__btn"></div>
+                            <div class="faq__question">Where can I play the spin game?</div>
+                        </div>
+                        <div class="faq__panel">
+                          <p class=" paragraph faq__paragraph">You can enjoy the live casino game in any online casino. Ensure it's regulated and licensed for max safety playing online.</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
         </main>
 
+        <footer>
+            <div class="footer">
+                <div class="footer__main">
+                    <div class="container footer__container">
+                        <a class="logo footer__logo" href="#gemix">
+                            <img  class="logo__img" src="./assets/images/logo-footer.webp" alt="Gemix logo">
+                        </a>
+                        <div class="footer__text">
+                            Be ready to have fun and win money online simultaneously in Crazy Time game show by Evolution.
+                            Just place a bet on your lucky number. With multipliers up to 25,000x and 4 bonus games your chances on reward are even higher.
+                        </div>    
+                    </div>
+                </div>
+                <div class="footer__copy container">2022 © from Evolution Gaming. Play responsibly.</div>
+            </div>
+        </footer>
 
+        <button class="btn-to-top"></button>
 
     </div>
 

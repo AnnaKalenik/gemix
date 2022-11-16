@@ -7,10 +7,6 @@ body {
     color: $txt-dark;
     box-sizing: border-box;
     background-color: $site-bg;
-    background-image: url('./../images/bg-img.webp');
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .wrapper {
@@ -21,6 +17,10 @@ body {
     max-width: calc(1179px + 80px + 80px);
     margin: 0 auto;
     padding: 0 80px;
+
+    @media (max-width: 1024px) {
+        padding: 0 40px;
+    }
 }
 
 .jackpot {
@@ -84,7 +84,7 @@ body {
     padding: 11.5px 36.5px;
 
     &_big {
-        width: 45%;
+        width: 391px;
         font-size: 20px;
         line-height: 30px;
     }
@@ -100,9 +100,18 @@ body {
     }
 }
 
+.btn-demo {
+    @include button-style ($fs: 16px, $lh: 24px, $bor: 2px solid $txt-white, $bck: transparent, $bsh: none);
+    
+    &:hover {
+        background: #44f828;
+    }
+}
+
 .btn,
 .btn-transp,
-.btn-3d {
+.btn-3d,
+.btn-demo {
     @include flex-container;
     cursor: pointer;
     transition: all 0.3s ease-in;
@@ -115,7 +124,6 @@ body {
 
 .rating {
     @include flex-container;
-    background-color: $site-bg;
     padding: 25px 0;
     margin-top: 25px;
 
@@ -139,6 +147,8 @@ body {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 20px;
+    width: 100%;
+    text-align: left;
 }
 
 
@@ -158,9 +168,10 @@ body {
 
 .text-section {
     @include flex-container($dir: column, $ali: stretch);
-    margin-top: 70px;
+    margin-top: $margin-top;
 
     &__img {
+        width: 100%;
         margin-bottom: 70px;
         filter: drop-shadow(0px 7px 10px rgba(0, 0, 0, 0.25));
     }
@@ -253,26 +264,83 @@ body {
     transform: scale(1.4);
 }
 
-// .title-3 {
-//     @include title($fs: 35px, $lh: 52px, $pd: 10px 0 20px);
-// }
+.faq {
+    margin-top: $margin-top;
 
-// .title-4 {
-//     @include title($fs: 30px, $lh: 45px, $pd: 10px 0 20px);
-// }
+    &__title {
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
 
-// .btn-to-header {
-//     display: block;
-//     position: absolute;
-//     bottom: 90px;
-//     right: 13%;
-//     width: 137px;
-//     height: 137px;
-//     background-image: url('./../icons/btn-to-header.svg');
-//     background-size: contain;
-//     transition: all 0.3s ease;
+    &__item {
+        text-align: left;
+        background: rgba(253, 255, 228, 0.25);
+        box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        padding-bottom: 30px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
 
-//     &:hover {
-//         transform: scale(1.1);
-//     }
-// }
+    &__accordion {
+        @include flex-container($jus: flex-start);
+        width: 100%;
+        border-radius: 30px;
+        padding: 40px 45px 10px 36px;
+        cursor: pointer;
+        transition: all 0.4s;
+    }
+
+    &__btn {
+        width: 34px;
+        height: 34px;
+        background-image: url('../icons/btn-plus.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 37px;
+
+        &_active {
+            background-image: url('../icons/btn-minus.svg');
+        } 
+    }
+
+    &__question {
+        font-weight: 700;
+    }
+
+    &__panel {
+        padding: 0 45px 0 108px;
+        overflow: hidden;
+        max-height: 0;
+        transition: all 0.2s ease-out;
+    }
+
+    &__paragraph {
+        margin: 0;
+    }
+}
+
+.btn-to-top {
+    position: fixed;
+    box-sizing: border-box;
+    width: 97px;
+    height: 97px;
+    right: 150px;
+    bottom: 95px;
+    background: $btn-top-bg;
+    border: $btn-top-border;
+    border-radius: 50%;
+    box-shadow: $btn-top-shadow;
+    background-image: url('../icons/btn-top-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: $btn-top-bg-hover;
+        background-image: url('../icons/btn-top-arrow.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: $btn-top-shadow-hover;
+    }
+}

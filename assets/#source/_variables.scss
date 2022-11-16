@@ -12,13 +12,20 @@ $hero-screen-shadow: 0px 15px 20px rgba(0, 0, 0, 0.25);
 
 $spin-item-bg: #47DE00;
 
-$rating-card-bg: linear-gradient(270deg, rgba(250, 255, 0, 0.5) 6.55%, rgba(219, 255, 0, 0) 91.27%);
+$rating-bg: linear-gradient(270deg, rgba(250, 255, 0, 0.5) 6.55%, rgba(219, 255, 0, 0) 91.27%);
+
+$demo-item-bg: #49D700;
+$demo-item-shadow: 0px 10px 20px rgba(0, 0, 0, 0.34), inset 0px 10px 20px rgba(255, 255, 255, 0.37), inset 0px -10px 20px #298200;
+
+$footer-bg:  linear-gradient(90deg, rgba(48, 130, 10, 0) 0%, rgba(63, 130, 10, 0.6) 51.56%, rgba(63, 130, 10, 0) 100%);;
+$footer-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 $txt-white: #FFFFFF;
 $txt-dark: #0F3000;
 $txt-main-title: #A2FF76;
 $txt-first-cards_green: #196200;
 $txt-second-cards_green: #155100;
+$txt-footer: #EEFFC9;
 
 $btn-2d-bg: #D3D42E;
 $btn-2d-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
@@ -34,17 +41,27 @@ $btn-3d-shadow: 1px 7px 20px rgba(0, 0, 0, 0.25);
 $btn-transp-bg: transparent;
 $btn-transp-border: 2px solid #FFFFFF;
 
+$btn-top-bg: #3CBC00;
+$btn-top-bg-hover: #cfcb01;
+$btn-top-border: 1px solid #EEFFC9;
+$btn-top-shadow: 2px 10px 20px rgba(255, 255, 255, 0.13);
+$btn-top-shadow-hover: 2px 10px 20px rgba(255, 255, 255, 0.357);
+
 $btn-radius: 50px;
 $block-radius: 20px;
+
+$margin-top: 72px;
 
 
 @mixin flex-container ($dir: row,
                       $jus: center,
-                      $ali: center) {
+                      $ali: center,
+                      $wrap: wrap) {
     display: flex;
     flex-direction: $dir;
     justify-content: $jus;
     align-items: $ali;
+    flex-wrap: $wrap;
 }
 
 @mixin button-style ($cl: $txt-white,
