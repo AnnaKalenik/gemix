@@ -15,6 +15,31 @@
     @media (max-width: 1220px) {
         background-position: left 0 top -53px, left 0 top 300px;
     }
+
+    @media (max-width: 1024px) {
+        background-size: 150%;
+        background-position: left -200px top -63px, left -200px top 400px;
+    }
+
+    @media (max-width: 850px) {
+        background-size: 200%;
+        background-position: left -400px top -73px, left -400px top 400px;
+    }
+
+    @media (max-width: 650px) {
+        background-size: 300%;
+        background-position: left -450px top -80px, left -450px top 400px;
+    }
+
+    @media (max-width: 540px) {
+        background-size: 400%;
+        background-position: left -350px top -90px, left -350px top 400px;
+    }
+
+    @media (max-width: 420px) {
+        background-size: 500%;
+        background-position: left -450px top -90px, left -450px top 400px;
+    }
 }
 
 .header {
@@ -22,6 +47,10 @@
     background: $header-bg;
     box-shadow: $header-shadow;
     backdrop-filter: blur(3px);
+
+    @media (max-width: 939px) {
+        padding-bottom: 10px;;        
+    }
 
     &__container {
         @include flex-container($jus: space-between);
@@ -71,6 +100,10 @@
             width: 330px;
             height: auto;
         }
+
+        @media (max-width: 405px) {
+            width: 240px;
+        }
     }
 
     &__screen {
@@ -102,9 +135,21 @@
         margin-top: 21px;
     }
 
+    &__btn-transp,
+    &__btn {
+        @media (max-width: 491px) {
+            margin-top: 20px;
+        }
+    }
+
     &__btn-3d {
         margin: 33px auto 0;
         padding: 25px 0;
+
+        @media (max-width: 570px) {
+            font-size: 18px;
+            padding: 15px 0;
+        }
     }
 }
 
@@ -127,9 +172,18 @@
         border-radius: $block-radius;
         padding: 19px 56px 25px;
 
+        @media (max-width: 570px) {
+            padding: 19px 20px 20px;
+        }
+
         &_small {
             background: rgba(71, 222, 0);;
             padding: 20px 70px 40px;
+
+            @media (max-width: 429px) {
+                width: 100%;
+                padding: 19px 20px 20px;
+            }
         }
 
         &_big {
@@ -140,8 +194,10 @@
             padding: 13px 70px 40px;
             margin: 0 10px;
 
-            @media (max-width: 1263px) {
-                // margin: 0 10px;
+            @media (max-width: 429px) {
+                width: 100%;
+                padding: 19px 20px 20px;
+                margin: 0;
             }
         }
 
@@ -241,6 +297,11 @@
             font-size: 30px;
             line-height: 35px;
             margin-top: 34px;
+
+            @media (max-width: 470px) {
+                font-size: 25px;
+                line-height: 30px;
+            }
         }
     }
 
@@ -259,10 +320,22 @@
     @include flex-container($jus: flex-start);
     margin-top: 25px;
 
+    @media (max-width: 520px) {
+        margin-top: 50px;
+    }
+
     &__title {
         text-align: left;
         margin-bottom: 18px;
         line-height: 43px;
+
+        @media (max-width: 767px) {
+            padding-right: 130px;
+        }
+
+        @media (max-width: 470px) {
+            padding-right: 0;
+        }
     }
     
     &__block {
@@ -271,6 +344,23 @@
 
         @media (max-width: 1206px) {
             width: 74%;
+        }
+
+        @media (max-width: 1024px) {
+            width: 100%;
+            padding: 37px 260px 17px 61px;
+        }
+
+        @media (max-width: 767px) {
+            padding: 75px 61px 17px;
+        }
+
+        @media (max-width: 605px) {
+            padding: 75px 40px 17px;
+        }
+
+        @media (max-width: 570px) {
+            padding: 75px 15px 17px;
         }
     }
 
@@ -282,12 +372,28 @@
         @media (max-width: 1206px) {
             width: 360px;
             top: 100px;
-            right: 70px;
         }
 
         @media (max-width: 1024px) {
             width: 260px;
-            top: 0px;
+            top: -20px;
+            right: 30px;
+        }
+
+        @media (max-width: 767px) {
+            width: 200px;
+            top: -30px;
+            right: 20px;
+        }
+
+        @media (max-width: 520px) {
+            width: 160px;
+            top: -50px;
+            right: 0px;
+        }
+
+        @media (max-width: 470px) {
+            width: 130px;
         }
     }
 }
@@ -326,31 +432,64 @@
 
     &__list {
         @include flex-container($jus: space-between, $ali: flex-start);
+
+        @media (max-width: 740px) {
+            flex-direction: column;
+        }
     }
 
+    &__item {
+        width: 40%;
 
+        @media (max-width: 910px) {
+            width: 50%;
+        }
+
+        @media (max-width: 740px) {
+            width: 100%;
+        }
+    }
 
     &__btn-3d {
         margin: 95px auto 0;
         box-shadow: 0px 2px 50px #31FF45;
+
+        @media (max-width: 700px) {
+            margin: 115px auto 0;
+        }
     }
 }
 
 .table-wrapper {
     @include block ($pad: 27px 107px 127px);
     width: 100%;
+
+    @media (max-width: 1024px) {
+        padding: 27px 60px 127px;
+    }
+
+    @media (max-width: 570px) {
+        padding: 27px 15px 107px;
+    }
 }
 
 .table {
-    vertical-align: top;
+    width: 100%;
+
+    @media (max-width: 870px) {
+        font-size: 15px;
+        line-height: 21px;
+    }
 
     &__first {
         font-weight: 700;
+        padding-right: 10px;
     }
 
     &__first,
     &__second {
         width: 50%;
+        vertical-align: top;
         padding-bottom: 10px;
     }
 }
@@ -360,6 +499,10 @@
     width: 746px;
     height: 274px;
     background: black;
+    background-image: url('../images/video-poster.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     border: 2px solid $txt-white;
     border-radius: $block-radius;
     overflow: hidden;
@@ -369,12 +512,27 @@
         width: 80%;
     }
 
+    @media (max-width: 700px) {
+        height: 200px;
+        margin: -85px auto;
+    }
+
+    @media (max-width: 420px) {
+        height: 130px;
+    }
+
     &__btn {
         position: absolute;
         top: calc(50% - 77px);
         left: calc(50% - 77px);
         cursor: pointer;
         transition: all 0.3s ease;
+
+        @media (max-width: 554px) {
+            width: 110px;
+            top: calc(50% - 55px);
+            left: calc(50% - 55px);    
+        }
 
         &_hidden {
             display: none;
@@ -395,6 +553,14 @@
 
     &__block {
         @include block ($pad: 30px 62px 50px);
+
+        @media (max-width: 768px) {
+            padding: 20px 40px 40px;
+        }
+
+        @media (max-width: 570px) {
+            padding: 20px 15px 30px;
+        }
     }
 
     &__title {
@@ -415,6 +581,14 @@
                         $bsh: $demo-item-shadow,
                         $pad: 23px 45px);
         margin-top: 20px;
+
+        @media (max-width: 1024px) {
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 570px) {
+            padding: 20px 15px;
+        }
     }
 
     &__col-1 {
@@ -440,6 +614,10 @@
         color: #196000;
         margin-top: 22px;
         padding: 2px 26px 2px 46px;
+
+        @media (max-width: 1024px) {
+            margin-bottom: 15px;
+        }
 
         &::before {
             position: absolute;
@@ -479,13 +657,14 @@
         font-size: 26px;
         line-height: 42px;
         color: #FFFFFF;
+        text-align: center;
         padding: 10px 0 12px;
         margin-bottom: 17px;
         
         &::after {
             position: absolute;
             content: '';
-            width: 440px;
+            width: 100%;
             height: 1px;
             bottom: 0px;
             left: 0px;
@@ -500,6 +679,11 @@
 
     &__col-3 {
         @include flex-container($dir: column, $jus: space-between);
+
+        @media (max-width: 1024px) {
+            flex-direction: row;
+            justify-content: center;
+        }
     }
 
     &__btn-3d,
@@ -507,6 +691,10 @@
         padding: 12px 38.5px;
         flex-wrap: nowrap;
         width: 170px;
+
+        @media (max-width: 1024px) {
+            margin: 28px 10px 0;
+        }
     }
 
     &__btn-3d {
@@ -529,6 +717,14 @@
     &__container {
         position: relative;
         padding: 46px 140px 34px;
+
+        @media (max-width: 767px) {
+            padding: 46px 40px 34px;
+        }
+
+        @media (max-width: 570px) {
+            padding: 46px 15px 34px;
+        }
     }
 
     &__logo {

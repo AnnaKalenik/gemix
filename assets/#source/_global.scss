@@ -21,6 +21,10 @@ body {
     @media (max-width: 1024px) {
         padding: 0 40px;
     }
+
+    @media (max-width: 570px) {
+        padding: 0 15px;
+    }
 }
 
 .jackpot {
@@ -28,6 +32,11 @@ body {
     text-transform: uppercase;
     background: $jackpot-bg;
     padding: 16.2px 31px 16.2px 69px;
+
+    @media (max-width: 346px) {
+        text-align: center;
+        padding: 13.2px 25px 13.2px 49px;
+    }
 
     &::before {
         position: absolute;
@@ -39,6 +48,11 @@ body {
         background-image: url('./../icons/star-3d.svg');
         background-repeat: no-repeat;
         background-size: cover;
+
+        @media (max-width: 346px) {
+            top: 27px;
+            left: 40px;
+        }
     }
 }
 
@@ -83,10 +97,23 @@ body {
     @include button-style ($fs: 16px, $lh: 24px, $bor: $btn-3d-border, $bck: $btn-3d-bg, $bsh: $btn-3d-shadow);
     padding: 11.5px 36.5px;
 
+    @media (max-width: 570px) {
+        padding: 9.5px 34.5px;
+    }
+
     &_big {
         width: 391px;
         font-size: 20px;
         line-height: 30px;
+
+        @media (max-width: 570px) {
+            font-size: 18px;
+            line-height: 28px;
+        }
+
+        @media (max-width: 491px) {
+            width: 280px;
+        }
     }
 
     &_spin {
@@ -102,6 +129,10 @@ body {
 
 .btn-demo {
     @include button-style ($fs: 16px, $lh: 24px, $bor: 2px solid $txt-white, $bck: transparent, $bsh: none);
+
+    @media (max-width: 570px) {
+        padding: 9.5px 34.5px;
+    }
     
     &:hover {
         background: #44f828;
@@ -120,12 +151,21 @@ body {
 .main-title {
     @include title ($col: $txt-main-title);
     text-shadow: 0px 0px 20px #001E03;
+
+    @media (max-width: 570px) {
+        font-size: 35px;
+        line-height: 50px;
+    }
 }
 
 .rating {
     @include flex-container;
     padding: 25px 0;
     margin-top: 25px;
+
+    @media (max-width: 570px) {
+        flex-direction: column;
+    }
 
     &__text {
         font-weight: 500;
@@ -154,16 +194,31 @@ body {
 
 .title {
     @include title($fs: 40px, $lh: 60px);
+
+    @media (max-width: 570px) {
+        font-size: 30px;
+        line-height: 50px;
+    }
 }
 
 .title-3 {
     @include title($fs: 35px, $lh: 52px);
     margin-bottom: 25px;
+
+    @media (max-width: 570px) {
+        font-size: 25px;
+        line-height: 42px;
+    }
 }
 
 .title-4 {
     @include title($fs: 30px, $lh: 45px);
     margin-bottom: 25px;
+
+    @media (max-width: 570px) {
+        font-size: 20px;
+        line-height: 35px;
+    }
 }
 
 .text-section {
@@ -179,6 +234,10 @@ body {
     &__block {
         @include flex-container($dir: column);
         @include block ($pad: 30px 61px 21px);
+
+        @media (max-width: 570px) {
+            padding: 20px 15px 21px;
+        }
     }
 
     &__title {
@@ -283,12 +342,21 @@ body {
     }
 
     &__accordion {
-        @include flex-container($jus: flex-start);
+        @include flex-container($jus: flex-start, $wrap: nowrap);
+        gap: 37px;
         width: 100%;
         border-radius: 30px;
-        padding: 40px 45px 10px 36px;
+        padding: 40px 36px 10px 36px;
         cursor: pointer;
         transition: all 0.4s;
+
+        @media (max-width: 570px) {
+            padding: 40px 15px 10px 20px;
+        }
+
+        @media (max-width: 435px) {
+            gap: 15px;
+        }
     }
 
     &__btn {
@@ -296,8 +364,11 @@ body {
         height: 34px;
         background-image: url('../icons/btn-plus.svg');
         background-repeat: no-repeat;
-        background-size: cover;
-        margin-right: 37px;
+        background-size: 34px 34px;
+
+        @media (max-width: 415px) {
+            width: 65px;
+        }
 
         &_active {
             background-image: url('../icons/btn-minus.svg');
@@ -309,10 +380,22 @@ body {
     }
 
     &__panel {
-        padding: 0 45px 0 108px;
+        padding: 0 36px 0 108px;
         overflow: hidden;
         max-height: 0;
         transition: all 0.2s ease-out;
+
+        @media (max-width: 570px) {
+            padding: 0 15px 0 90px;
+        }
+
+        @media (max-width: 435px) {
+            padding: 0 15px 0 70px;
+        }
+
+        @media (max-width: 415px) {
+            padding: 0 15px 0 27%;
+        }
     }
 
     &__paragraph {
@@ -336,11 +419,49 @@ body {
     background-position: center;
     transition: all 0.3s ease;
 
+    @media (max-width: 1440px) {
+        right: 50px;
+        bottom: 50px;
+    }
+
+    @media (max-width: 1024px) {
+        width: 70px;
+        height: 70px;
+        background-size: 40%;
+    }
+
+    @media (max-width: 570px) {
+        width: 60px;
+        height: 60px;
+        right: 15px;
+        bottom: 20px;
+        background-size: 30%;
+    }
+
     &:hover {
         background: $btn-top-bg-hover;
         background-image: url('../icons/btn-top-arrow.svg');
         background-repeat: no-repeat;
         background-position: center;
         box-shadow: $btn-top-shadow-hover;
+
+        @media (max-width: 1440px) {
+            right: 50px;
+            bottom: 50px;
+        }
+    
+        @media (max-width: 1024px) {
+            width: 70px;
+            height: 70px;
+            background-size: 40%;
+        }
+    
+        @media (max-width: 570px) {
+            width: 60px;
+            height: 60px;
+            right: 15px;
+            bottom: 20px;
+            background-size: 30%;
+        }
     }
 }
