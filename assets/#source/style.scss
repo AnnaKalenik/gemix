@@ -548,7 +548,10 @@
 }
 
 .screenshots {
-    margin-top: $margin-top;
+    &__container {
+        max-width: 1440px;
+        margin: $margin-top auto 0;
+    }
 }
 
 .demo {

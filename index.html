@@ -7,10 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="canonical" href="#">
 
     <link rel="stylesheet" type="text/css" media="all" href="main.css">
+    </head>
 </head>
 <body>
 
@@ -241,20 +243,25 @@
                 </div>
             </section>
 
-            <section class="screenshots container">
+            <section class="screenshots screenshots__container">
                 <h2 class="title text-section__title">H2 Screenshots</h2>
-                <div class="slider-container">
-                    <div class="slider">
-                        <div class="slider__line">
-                            <img class="slider__slide" src="./assets/images/slide1.webp" alt="Gemix">
-                            <img class="slider__slide" src="./assets/images/slide2.webp" alt="Gemix">
-                            <img class="slider__slide" src="./assets/images/slide3.webp" alt="Gemix">
-                            <img class="slider__slide" src="./assets/images/slide4.webp" alt="Gemix">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./assets/images/slide1.webp" alt="Gemix" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets/images/slide2.webp" alt="Gemix" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets/images/slide2.webp" alt="Gemix" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets/images/slide2.webp" alt="Gemix" />
+                            </div>
                         </div>
+                        <div class="swiper-pagination"></div>
                     </div>
-                    <button class="btn-prev"></button>
-                    <button class="btn-next"></button>     
-                </div>
             </section>
 
             <section class="text-section container">
@@ -454,7 +461,8 @@
 
     </div>
 
-    <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script type="module" src="./assets/js/index.js"></script>
 </body>
 </html>
