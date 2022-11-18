@@ -418,6 +418,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     transition: all 0.3s ease;
+    display: none;
 
     @media (max-width: 1440px) {
         right: 50px;

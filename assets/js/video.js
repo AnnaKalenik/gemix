@@ -1,33 +1,27 @@
 export default function video() {
-    const video = document.querySelector('.video-block__video');
-    const btnPlay = document.querySelector('.video-block__btn');
-    const classHidden = document.querySelector('.video-block__btn_hidden');
+    // let player;
 
-    const startVideo = () => {
-        if (!classHidden) {
-            btnPlay.classList.add('video-block__btn_hidden');
-            video.setAttribute('controls', 'true');
-            video.play();
-        }
-    }
+    // let btn = document.querySelector('.close')
 
-    const pauseVideo = () => {
-        if (video.play) {
-            video.pause();
-            btnPlay.classList.remove('video-block__btn_hidden');
-            video.removeAttribute('controls', 'true');
-        }
-    }
+    // function onYouTubePlayerAPIReady() {
+    //     player = new YT.Player('player');
+    // }
 
-    btnPlay.addEventListener('click', startVideo);
-    video.addEventListener('click', pauseVideo);
+    // btn.addEventListener('click', function () {
+    //     player.stopVideo()
+    // })
 
-    const isVideoEnded = () => {
-        if (video.ended) {
-            btnPlay.classList.remove('video-block__btn_hidden');
-            video.removeAttribute('controls');
-        }
-    }
-
-    video.addEventListener('ended', isVideoEnded);
+    // function onYouTubeIframeAPIReady() {
+    //     var player;
+    //     player = new YT.Player('player', {
+    //       videoId: 'M7lc1UVf-VE',
+    //       playerVars: { 'autoplay': 1, 'controls': 0 },
+    //       events: {
+    //         'onReady': onPlayerReady,
+    //         'onPlaybackQualityChange': onPlayerPlaybackQualityChange,
+    //         'onStateChange': onPlayerStateChange,
+    //         'onError': onPlayerError
+    //       }
+    //     });
+    //   }
 }
